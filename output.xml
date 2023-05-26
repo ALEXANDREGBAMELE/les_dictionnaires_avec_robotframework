@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230526 14:10:26.201" rpa="false" schemaversion="3">
+<suite id="s1" name="Tasks" source="c:\Users\HP\Desktop\les_dictionnaires_avec_robotframework\test_pratique_1\tasks.robot">
+<test id="s1-t1" name="Test dictionnaire" line="19">
+<kw name="Append To List" library="Collections">
+<arg>${Personnes}</arg>
+<arg>Anicet</arg>
+<arg>Alexandre</arg>
+<arg>Ange</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230526 14:10:26.324" endtime="20230526 14:10:26.325"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${Couleurs}</arg>
+<arg>Bleu</arg>
+<arg>Noir</arg>
+<arg>Jaune</arg>
+<arg>Vert</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230526 14:10:26.327" endtime="20230526 14:10:26.328"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${dictionnaireRapport}</arg>
+<arg>personnes</arg>
+<arg>${Personnes}</arg>
+<arg>couleurs</arg>
+<arg>${Couleurs}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20230526 14:10:26.332" endtime="20230526 14:10:26.335"/>
+</kw>
+<for flavor="IN">
+<var>${key}</var>
+<value>@{dictionnaireRapport}</value>
+<iter>
+<var name="${key}">personnes</var>
+<if>
+<branch type="IF" condition="'${key}' == 'personnes'">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${dictionnaireRapport}[${key}][0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230526 14:10:26.352" endtime="20230526 14:10:26.357"/>
+</kw>
+<status status="PASS" starttime="20230526 14:10:26.340" endtime="20230526 14:10:26.358"/>
+</branch>
+<status status="PASS" starttime="20230526 14:10:26.339" endtime="20230526 14:10:26.359"/>
+</if>
+<status status="PASS" starttime="20230526 14:10:26.339" endtime="20230526 14:10:26.359"/>
+</iter>
+<iter>
+<var name="${key}">couleurs</var>
+<if>
+<branch type="IF" condition="'${key}' == 'personnes'">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${dictionnaireRapport}[${key}][0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230526 14:10:26.368" endtime="20230526 14:10:26.370"/>
+</kw>
+<status status="NOT RUN" starttime="20230526 14:10:26.367" endtime="20230526 14:10:26.371"/>
+</branch>
+<status status="PASS" starttime="20230526 14:10:26.365" endtime="20230526 14:10:26.372"/>
+</if>
+<status status="PASS" starttime="20230526 14:10:26.361" endtime="20230526 14:10:26.372"/>
+</iter>
+<status status="PASS" starttime="20230526 14:10:26.337" endtime="20230526 14:10:26.373"/>
+</for>
+<status status="PASS" starttime="20230526 14:10:26.322" endtime="20230526 14:10:26.375"/>
+</test>
+<doc>Test sur les librairy et Liste</doc>
+<status status="PASS" starttime="20230526 14:10:26.215" endtime="20230526 14:10:26.380"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
